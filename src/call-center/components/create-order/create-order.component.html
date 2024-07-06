@@ -1,0 +1,31 @@
+<h3>Create order</h3>
+<div style="margin: 16px 0" class="create-order">
+  <form [formGroup]="form">
+    <div class="form-group" style="margin-bottom: 12px">
+      <input
+        nz-input
+        placeholder="Address"
+        formControlName="address"
+        type="text"
+      />
+    </div>
+    <div class="form-group" style="margin-bottom: 12px">
+      <input nz-input placeholder="Notes" formControlName="notes" type="text" />
+    </div>
+  </form>
+</div>
+
+<div class="create-order-btn" style="margin-top: 12px; text-align: right">
+  <button nz-button nzType="primary" (click)="handleGotoConfirmOrder()">
+    Confirm Order
+  </button>
+
+  <button
+    style="margin-left: 8px"
+    nz-button
+    nzType="primary"
+    (click)="handleUpdateOrder()"
+  >
+    Update Order
+  </button>
+</div>

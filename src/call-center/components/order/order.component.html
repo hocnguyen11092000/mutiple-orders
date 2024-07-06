@@ -1,0 +1,9 @@
+<h3>{{ order.name }}</h3>
+
+@switch (step$$()) { @case (StepEnum.CALL) {
+<app-customer></app-customer>
+} @case (StepEnum.CREATE_ORDER) {
+<app-create-order></app-create-order>
+} @case (StepEnum.CONFIRM_ORDER) {
+<app-confirm-order></app-confirm-order>
+} }
